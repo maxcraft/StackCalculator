@@ -157,7 +157,7 @@ public class ListInverter< E > implements List< E >
 	@Override
 	public < T > T[] toArray( T[] array )
 	{
-		return array;
+		return mList.toArray( array );
 	}
 
 	private int invertLocation( int location )
