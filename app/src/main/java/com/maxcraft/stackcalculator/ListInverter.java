@@ -122,7 +122,7 @@ public class ListInverter< E > implements List< E >
 	}
 
 	@Override
-	public boolean retainAll(@NonNull Collection< ? > collection )
+	public boolean retainAll( Collection< ? > collection )
 	{
 		return mList.retainAll( collection );
 	}
@@ -155,7 +155,7 @@ public class ListInverter< E > implements List< E >
 
 	@NonNull
 	@Override
-	public < T > T[] toArray(@NonNull T[] array )
+	public < T > T[] toArray( T[] array )
 	{
 		return array;
 	}
