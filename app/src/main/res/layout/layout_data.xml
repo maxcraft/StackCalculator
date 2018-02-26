@@ -2,7 +2,10 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="vertical"
               android:layout_width="match_parent"
-              android:layout_height="match_parent">
+              android:layout_height="match_parent"
+			  android:paddingLeft="@dimen/activity_horizontal_margin"
+			  android:paddingRight="@dimen/activity_horizontal_margin">
+
     <TextView
 	    android:id="@+id/indicator_txt"
         android:layout_width="match_parent"
@@ -14,7 +17,7 @@
 	<TextView
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:text="Stack:"/>
+		android:text="@string/stack"/>
 
 	<ListView
 		android:id="@android:id/list"

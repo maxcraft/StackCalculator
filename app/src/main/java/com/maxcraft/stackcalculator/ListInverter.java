@@ -10,7 +10,7 @@ import java.util.ListIterator;
 /**
  * Created by Maksym.Kravtsov on 1/23/2016.
  */
-public class ListInverter< E > implements List< E >
+class ListInverter< E > implements List< E >
 {
 	private final List< E > mList;
 
@@ -32,13 +32,13 @@ public class ListInverter< E > implements List< E >
 	}
 
 	@Override
-	public boolean addAll( int location, Collection< ? extends E > collection )
+	public boolean addAll(int location, @NonNull Collection< ? extends E > collection )
 	{
 		return mList.addAll( invertLocation( location ), collection );
 	}
 
 	@Override
-	public boolean addAll( Collection< ? extends E > collection )
+	public boolean addAll(@NonNull Collection< ? extends E > collection )
 	{
 		return mList.addAll( collection );
 	}
@@ -56,7 +56,7 @@ public class ListInverter< E > implements List< E >
 	}
 
 	@Override
-	public boolean containsAll( Collection< ? > collection )
+	public boolean containsAll(@NonNull Collection< ? > collection )
 	{
 		return mList.containsAll( collection );
 	}
@@ -79,7 +79,6 @@ public class ListInverter< E > implements List< E >
 		return mList.isEmpty();
 	}
 
-	@NonNull
 	@Override
 	public Iterator< E > iterator()
 	{
@@ -98,7 +97,6 @@ public class ListInverter< E > implements List< E >
 		return null;
 	}
 
-	@NonNull
 	@Override
 	public ListIterator< E > listIterator( int location )
 	{
@@ -118,13 +116,13 @@ public class ListInverter< E > implements List< E >
 	}
 
 	@Override
-	public boolean removeAll( Collection< ? > collection )
+	public boolean removeAll(@NonNull Collection< ? > collection )
 	{
 		return mList.removeAll( collection );
 	}
 
 	@Override
-	public boolean retainAll( Collection< ? > collection )
+	public boolean retainAll(@NonNull Collection< ? > collection )
 	{
 		return mList.retainAll( collection );
 	}
@@ -157,9 +155,9 @@ public class ListInverter< E > implements List< E >
 
 	@NonNull
 	@Override
-	public < T > T[] toArray( T[] array )
+	public < T > T[] toArray(@NonNull T[] array )
 	{
-		return mList.toArray( array );
+		return array;
 	}
 
 	private int invertLocation( int location )

@@ -6,9 +6,9 @@ import java.util.Stack;
 /**
  * Created by Maksym.Kravtsov on 1/23/2016.
  */
-public class Calculator
+class Calculator
 {
-	private Stack< Double > mStack = new Stack<>();
+	private final Stack< Double > mStack = new Stack<>();
 
 	private static class BiOperands
 	{
@@ -80,9 +80,7 @@ public class Calculator
 
 	private Double getStackValue()
 	{
-		Double retval = ( mStack.size() > 0 ) ? mStack.pop() : 0.0;
-
-		return retval;
+		return ( mStack.size() > 0 ) ? mStack.pop() : 0.0;
 	}
 
 	public List< Double > getStack()

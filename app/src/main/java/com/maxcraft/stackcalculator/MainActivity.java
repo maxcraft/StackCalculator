@@ -16,25 +16,23 @@ import java.util.HashMap;
 
 public class MainActivity extends AppCompatActivity
 {
-	private DecimalFormatSymbols mDecimalFormatSymbols;
-	public String mMinusString;
-	public String mDotString;
-	private HashMap< Button, Runnable > mBtns = new HashMap<>();
+	private String mMinusString;
+	private String mDotString;
+	private final HashMap< View, Runnable > mBtns = new HashMap<>();
 	private View.OnClickListener mBtnClickListener;
 
 	private Calculator mCalculator;
 	private TextView mIndicatorTextView;
-	private ListView mStackListView;
 	private ArrayAdapter< Double > mAdapter;
-	private StringBuffer mInputString = new StringBuffer();
-	private NumberFormat mNumFormat = new DecimalFormat( "0.##############" );
+	private final StringBuffer mInputString = new StringBuffer();
+	private final NumberFormat mNumFormat = new DecimalFormat( "0.##############" );
 
 	@Override
 	protected void onCreate( Bundle savedInstanceState )
 	{
 		super.onCreate( savedInstanceState );
 		setContentView( R.layout.activity_main );
-		mDecimalFormatSymbols = new DecimalFormatSymbols();
+		DecimalFormatSymbols mDecimalFormatSymbols = new DecimalFormatSymbols();
 		mMinusString = String.valueOf( mDecimalFormatSymbols.getMinusSign() );
 		mDotString = String.valueOf( mDecimalFormatSymbols.getDecimalSeparator() );
 
@@ -59,9 +57,9 @@ public class MainActivity extends AppCompatActivity
 
 	private void initViews()
 	{
-		mIndicatorTextView = ( TextView )findViewById( R.id.indicator_txt );
-		mStackListView = ( ListView )findViewById( android.R.id.list );
-		mAdapter = new ArrayAdapter< Double >( this, android.R.layout.simple_list_item_1, new ListInverter<>( mCalculator.getStack() ) );
+		mIndicatorTextView = findViewById( R.id.indicator_txt );
+		ListView mStackListView = findViewById(android.R.id.list);
+		mAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, new ListInverter<>(mCalculator.getStack()));
 		mStackListView.setAdapter( mAdapter );
 
 		mBtnClickListener = new View.OnClickListener()
@@ -105,7 +103,7 @@ public class MainActivity extends AppCompatActivity
 
 	private void initButton( int btnId, Runnable command )
 	{
-		Button btn = ( Button )findViewById( btnId );
+		Button btn = findViewById( btnId );
 
 		if( btn != null )
 		{
