@@ -32,7 +32,7 @@ public class ListInverter< E > implements List< E >
 	}
 
 	@Override
-	public boolean addAll(int location, @NonNull Collection< ? extends E > collection )
+	public boolean addAll(int location, Collection< ? extends E > collection )
 	{
 		return mList.addAll( invertLocation( location ), collection );
 	}
