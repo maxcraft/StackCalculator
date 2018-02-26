@@ -56,7 +56,7 @@ public class ListInverter< E > implements List< E >
 	}
 
 	@Override
-	public boolean containsAll(@NonNull Collection< ? > collection )
+	public boolean containsAll( Collection< ? > collection )
 	{
 		return mList.containsAll( collection );
 	}
@@ -116,7 +116,7 @@ public class ListInverter< E > implements List< E >
 	}
 
 	@Override
-	public boolean removeAll(@NonNull Collection< ? > collection )
+	public boolean removeAll( Collection< ? > collection )
 	{
 		return mList.removeAll( collection );
 	}
