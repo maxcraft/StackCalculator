@@ -6,9 +6,9 @@ import java.util.Stack;
 /**
  * Created by Maksym.Kravtsov on 1/23/2016.
  */
-class Calculator
+public class Calculator
 {
-	private final Stack< Double > mStack = new Stack<>();
+	private Stack< Double > mStack = new Stack<>();
 
 	private static class BiOperands
 	{

@@ -24,17 +24,17 @@ public class MainActivity extends AppCompatActivity
 	private Calculator mCalculator;
 	private TextView mIndicatorTextView;
 	private ArrayAdapter< Double > mAdapter;
-	private final StringBuffer mInputString = new StringBuffer();
-	private final NumberFormat mNumFormat = new DecimalFormat( "0.##############" );
+	private StringBuffer mInputString = new StringBuffer();
+	private NumberFormat mNumFormat = new DecimalFormat( "0.##############" );
 
 	@Override
 	protected void onCreate( Bundle savedInstanceState )
 	{
 		super.onCreate( savedInstanceState );
 		setContentView( R.layout.activity_main );
-		DecimalFormatSymbols mDecimalFormatSymbols = new DecimalFormatSymbols();
-		mMinusString = String.valueOf( mDecimalFormatSymbols.getMinusSign() );
-		mDotString = String.valueOf( mDecimalFormatSymbols.getDecimalSeparator() );
+		DecimalFormatSymbols decimalFormatSymbols = new DecimalFormatSymbols();
+		mMinusString = String.valueOf( decimalFormatSymbols.getMinusSign() );
+		mDotString = String.valueOf( decimalFormatSymbols.getDecimalSeparator() );
 
 		mCalculator = ( Calculator )getLastCustomNonConfigurationInstance();
 
@@ -58,9 +58,9 @@ public class MainActivity extends AppCompatActivity
 	private void initViews()
 	{
 		mIndicatorTextView = findViewById( R.id.indicator_txt );
-		ListView mStackListView = findViewById(android.R.id.list);
-		mAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, new ListInverter<>(mCalculator.getStack()));
-		mStackListView.setAdapter( mAdapter );
+		ListView stackListView = findViewById( android.R.id.list );
+		mAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, new ListInverter<>( mCalculator.getStack() ));
+		stackListView.setAdapter( mAdapter );
 
 		mBtnClickListener = new View.OnClickListener()
 		{

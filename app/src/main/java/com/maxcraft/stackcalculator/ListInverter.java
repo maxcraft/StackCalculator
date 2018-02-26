@@ -10,7 +10,7 @@ import java.util.ListIterator;
 /**
  * Created by Maksym.Kravtsov on 1/23/2016.
  */
-class ListInverter< E > implements List< E >
+public class ListInverter< E > implements List< E >
 {
 	private final List< E > mList;
 
@@ -38,7 +38,7 @@ class ListInverter< E > implements List< E >
 	}
 
 	@Override
-	public boolean addAll(@NonNull Collection< ? extends E > collection )
+	public boolean addAll( Collection< ? extends E > collection )
 	{
 		return mList.addAll( collection );
 	}
