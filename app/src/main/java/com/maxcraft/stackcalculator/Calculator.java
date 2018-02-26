@@ -80,9 +80,7 @@ public class Calculator
 
 	private Double getStackValue()
 	{
-		Double retval = ( mStack.size() > 0 ) ? mStack.pop() : 0.0;
-
-		return retval;
+		return ( mStack.size() > 0 ) ? mStack.pop() : 0.0;
 	}
 
 	public List< Double > getStack()

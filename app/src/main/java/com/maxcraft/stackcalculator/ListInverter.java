@@ -79,7 +79,6 @@ public class ListInverter< E > implements List< E >
 		return mList.isEmpty();
 	}
 
-	@NonNull
 	@Override
 	public Iterator< E > iterator()
 	{
@@ -98,7 +97,6 @@ public class ListInverter< E > implements List< E >
 		return null;
 	}
 
-	@NonNull
 	@Override
 	public ListIterator< E > listIterator( int location )
 	{
