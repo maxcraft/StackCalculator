@@ -15,6 +15,9 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import java.text.NumberFormat;
+import java.util.Locale;
+
 import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.action.ViewActions.*;
 import static android.support.test.espresso.assertion.ViewAssertions.*;
@@ -122,7 +125,11 @@ public class MainActivityTest {
                                 15),
                         isDisplayed()));
         appCompatButton5.perform(click());
-        onView(withId(R.id.indicator_txt)).check(matches(withText("-1.5")));
+
+        Locale fmtLocale = Locale.getDefault(Locale.Category.FORMAT);
+        NumberFormat formatter = NumberFormat.getInstance(fmtLocale);
+
+        onView(withId(R.id.indicator_txt)).check(matches(withText(formatter.format(-1.5))));
     }
 
     @Test
