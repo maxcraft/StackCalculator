@@ -32,7 +32,7 @@ public class MainActivityTest {
     @Test
     public void CleanBtnClickTest() {
         ViewInteraction appCompatButton = onView(
-                allOf(withId(R.id.btn_clear), withText("clear"),
+                allOf(withId(R.id.btn_clear), withText(R.string.clear),
                         childAtPosition(
                                 childAtPosition(
                                         withClassName(is("android.widget.LinearLayout")),
@@ -46,7 +46,7 @@ public class MainActivityTest {
     @Test
     public void pushBtnTestClick() {
         ViewInteraction appCompatButton = onView(
-                allOf(withId(R.id.btn_push), withText("push"),
+                allOf(withId(R.id.btn_push), withText(R.string.push),
                         childAtPosition(
                                 childAtPosition(
                                         withClassName(is("android.widget.LinearLayout")),
@@ -60,7 +60,7 @@ public class MainActivityTest {
     @Test
     public void swapBtnTestClick() {
         ViewInteraction appCompatButton = onView(
-                allOf(withId(R.id.btn_swap), withText("swap"),
+                allOf(withId(R.id.btn_swap), withText(R.string.swap),
                         childAtPosition(
                                 childAtPosition(
                                         withClassName(is("android.widget.LinearLayout")),
@@ -74,7 +74,7 @@ public class MainActivityTest {
     @Test
     public void divTest() {
         ViewInteraction appCompatButton = onView(
-                allOf(withId(R.id.btn_9), withText("9"),
+                allOf(withId(R.id.btn_9), withText(R.string.nine),
                         childAtPosition(
                                 childAtPosition(
                                         withClassName(is("android.widget.LinearLayout")),
@@ -84,7 +84,7 @@ public class MainActivityTest {
         appCompatButton.perform(click());
 
         ViewInteraction appCompatButton2 = onView(
-                allOf(withId(R.id.btn_neg), withText("±"),
+                allOf(withId(R.id.btn_neg), withText(R.string.neg),
                         childAtPosition(
                                 childAtPosition(
                                         withClassName(is("android.widget.LinearLayout")),
@@ -94,7 +94,7 @@ public class MainActivityTest {
         appCompatButton2.perform(click());
 
         ViewInteraction appCompatButton3 = onView(
-                allOf(withId(R.id.btn_push), withText("push"),
+                allOf(withId(R.id.btn_push), withText(R.string.push),
                         childAtPosition(
                                 childAtPosition(
                                         withClassName(is("android.widget.LinearLayout")),
@@ -104,7 +104,7 @@ public class MainActivityTest {
         appCompatButton3.perform(click());
 
         ViewInteraction appCompatButton4 = onView(
-                allOf(withId(R.id.btn_6), withText("6"),
+                allOf(withId(R.id.btn_6), withText(R.string.six),
                         childAtPosition(
                                 childAtPosition(
                                         withClassName(is("android.widget.LinearLayout")),
@@ -114,7 +114,7 @@ public class MainActivityTest {
         appCompatButton4.perform(click());
 
         ViewInteraction appCompatButton5 = onView(
-                allOf(withId(R.id.btn_div), withText("÷"),
+                allOf(withId(R.id.btn_div), withText(R.string.div),
                         childAtPosition(
                                 childAtPosition(
                                         withClassName(is("android.widget.LinearLayout")),
@@ -128,7 +128,7 @@ public class MainActivityTest {
     @Test
     public void addSubTest() {
         ViewInteraction appCompatButton = onView(
-                allOf(withId(R.id.btn_8), withText("8"),
+                allOf(withId(R.id.btn_8), withText(R.string.eight),
                         childAtPosition(
                                 childAtPosition(
                                         withClassName(is("android.widget.LinearLayout")),
@@ -138,7 +138,7 @@ public class MainActivityTest {
         appCompatButton.perform(click());
 
         ViewInteraction appCompatButton2 = onView(
-                allOf(withId(R.id.btn_push), withText("push"),
+                allOf(withId(R.id.btn_push), withText(R.string.push),
                         childAtPosition(
                                 childAtPosition(
                                         withClassName(is("android.widget.LinearLayout")),
@@ -148,7 +148,7 @@ public class MainActivityTest {
         appCompatButton2.perform(click());
 
         ViewInteraction appCompatButton3 = onView(
-                allOf(withId(R.id.btn_6), withText("6"),
+                allOf(withId(R.id.btn_6), withText(R.string.six),
                         childAtPosition(
                                 childAtPosition(
                                         withClassName(is("android.widget.LinearLayout")),
@@ -158,7 +158,7 @@ public class MainActivityTest {
         appCompatButton3.perform(click());
 
         ViewInteraction appCompatButton4 = onView(
-                allOf(withId(R.id.btn_push), withText("push"),
+                allOf(withId(R.id.btn_push), withText(R.string.push),
                         childAtPosition(
                                 childAtPosition(
                                         withClassName(is("android.widget.LinearLayout")),
@@ -168,7 +168,7 @@ public class MainActivityTest {
         appCompatButton4.perform(click());
 
         ViewInteraction appCompatButton5 = onView(
-                allOf(withId(R.id.btn_add), withText("+"),
+                allOf(withId(R.id.btn_add), withText(R.string.plus),
                         childAtPosition(
                                 childAtPosition(
                                         withClassName(is("android.widget.LinearLayout")),
@@ -178,7 +178,7 @@ public class MainActivityTest {
         appCompatButton5.perform(click());
 
         ViewInteraction appCompatButton6 = onView(
-                allOf(withId(R.id.btn_sub), withText("-"),
+                allOf(withId(R.id.btn_sub), withText(R.string.minus),
                         childAtPosition(
                                 childAtPosition(
                                         withClassName(is("android.widget.LinearLayout")),
@@ -192,7 +192,7 @@ public class MainActivityTest {
     @Test
     public void mulTest() {
         ViewInteraction appCompatButton = onView(
-                allOf(withId(R.id.btn_5), withText("5"),
+                allOf(withId(R.id.btn_5), withText(R.string.five),
                         childAtPosition(
                                 childAtPosition(
                                         withClassName(is("android.widget.LinearLayout")),
@@ -202,7 +202,7 @@ public class MainActivityTest {
         appCompatButton.perform(click());
 
         ViewInteraction appCompatButton2 = onView(
-                allOf(withId(R.id.btn_push), withText("push"),
+                allOf(withId(R.id.btn_push), withText(R.string.push),
                         childAtPosition(
                                 childAtPosition(
                                         withClassName(is("android.widget.LinearLayout")),
@@ -212,7 +212,7 @@ public class MainActivityTest {
         appCompatButton2.perform(click());
 
         ViewInteraction appCompatButton3 = onView(
-                allOf(withId(R.id.btn_4), withText("4"),
+                allOf(withId(R.id.btn_4), withText(R.string.four),
                         childAtPosition(
                                 childAtPosition(
                                         withClassName(is("android.widget.LinearLayout")),
@@ -222,7 +222,7 @@ public class MainActivityTest {
         appCompatButton3.perform(click());
 
         ViewInteraction appCompatButton4 = onView(
-                allOf(withId(R.id.btn_neg), withText("±"),
+                allOf(withId(R.id.btn_neg), withText(R.string.neg),
                         childAtPosition(
                                 childAtPosition(
                                         withClassName(is("android.widget.LinearLayout")),
@@ -232,7 +232,7 @@ public class MainActivityTest {
         appCompatButton4.perform(click());
 
         ViewInteraction appCompatButton5 = onView(
-                allOf(withId(R.id.btn_mul), withText("*"),
+                allOf(withId(R.id.btn_mul), withText(R.string.mul),
                         childAtPosition(
                                 childAtPosition(
                                         withClassName(is("android.widget.LinearLayout")),
@@ -246,7 +246,7 @@ public class MainActivityTest {
     @Test
     public void divByZeroTest() {
         ViewInteraction appCompatButton = onView(
-                allOf(withId(R.id.btn_1), withText("1"),
+                allOf(withId(R.id.btn_1), withText(R.string.one),
                         childAtPosition(
                                 childAtPosition(
                                         withClassName(is("android.widget.LinearLayout")),
@@ -256,7 +256,7 @@ public class MainActivityTest {
         appCompatButton.perform(click());
 
         ViewInteraction appCompatButton2 = onView(
-                allOf(withId(R.id.btn_push), withText("push"),
+                allOf(withId(R.id.btn_push), withText(R.string.push),
                         childAtPosition(
                                 childAtPosition(
                                         withClassName(is("android.widget.LinearLayout")),
@@ -266,7 +266,7 @@ public class MainActivityTest {
         appCompatButton2.perform(click());
 
         ViewInteraction appCompatButton3 = onView(
-                allOf(withId(R.id.btn_0), withText("0"),
+                allOf(withId(R.id.btn_0), withText(R.string.zero),
                         childAtPosition(
                                 childAtPosition(
                                         withClassName(is("android.widget.LinearLayout")),
@@ -276,7 +276,7 @@ public class MainActivityTest {
         appCompatButton3.perform(click());
 
         ViewInteraction appCompatButton4 = onView(
-                allOf(withId(R.id.btn_div), withText("÷"),
+                allOf(withId(R.id.btn_div), withText(R.string.div),
                         childAtPosition(
                                 childAtPosition(
                                         withClassName(is("android.widget.LinearLayout")),
